@@ -7,7 +7,7 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
-  run-shell-command:
+  build:
     runs-on: ubuntu-latest
     steps:
       name: echo a string
