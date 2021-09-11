@@ -3441,7 +3441,8 @@ input[type="button"].btn-block {
 
 .pagination-sm .page-link {
     padding: 0.275rem 0.75rem;
-    font-size: 0.875rem; }
+    font-size: 0.875rem;
+}
 
 .pagination-sm .page-item:first-child .page-link {
     border-bottom-left-radius: 0.2rem;
