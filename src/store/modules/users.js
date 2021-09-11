@@ -9,6 +9,10 @@ export default {
     username(state) {
       return (state.user && state.user.username) || null;
     },
+    getUser: async function ({ commit }) {
+      const user = await api.get("/user");
+      commit("setUser", user);
+    },
   },
   mutations: {
     setUser(state, payload) {
@@ -33,6 +37,10 @@ export default {
         console.error(e);
         throw e;
       }
+    },
+    logoutUser: async function ({ commit }) {
+      clearToken();
+      commit("setUser", null);
     },
   },
 };
